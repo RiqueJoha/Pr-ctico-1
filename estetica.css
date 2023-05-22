@@ -1,0 +1,19 @@
+body {
+    display: grid;
+    place-content: center;
+    background-color: rgb(226, 185, 192);
+}
+
+button {
+    border: 2px solid rgb(2, 2, 34);
+    background-color: rgb(212, 212, 224);
+
+}
+
+h1 {
+    font-style: monospace;
+}
+
+img {
+    width: 20vh;
+}
