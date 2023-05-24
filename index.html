@@ -11,7 +11,7 @@
 
 <body>
     <h1>Supermercado Los Devs</h1>
-    <Div>Cantidad de productos a mostrar:
+    <Div id="prueba">Cantidad de productos a mostrar:
         <select name="" id="muestra-cant">
             <option id="opc-1" value="1">1</option>
             <option id="opc-2" value="3">3</option>
@@ -19,6 +19,7 @@
             <option id="opc-4" value="10">10</option>
         </select>
     </Div>
+   
 
     <Div>Cantidad permitida de cada producto:
         <select name="" id="cant-permitida">
@@ -31,20 +32,22 @@
 
     <Div>Colores:
         <select name="" id="color-selec">
-            <option value="">Ninguno</option>
-            <option value="">Rojo-Amarillo</option>
-            <option value="">Verde-Violeta</option>
-            <option value="">Azul-Gris</option>
+            <option value="0">Ninguno</option>
+            <option value="1">Rojo-Amarillo</option>
+            <option value="2">Verde-Violeta</option>
+            <option value="3">Azul-Gris</option>
         </select>
     </Div>
 
     <button onclick="generar()">Generar</button>
+
+    <Div id="resultados">
     <p id="resultado-1"></p>
     <p id="resultado-2"></p>
     <p id="resultado-3"></p>
-
-    <img id= "imagen-producto"src="" alt="">
-
+    </Div>
+    <div id="contenedor-imagen"></div>
+   
 
     <script src="practico1.js"></script>
 </body>
