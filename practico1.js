@@ -1,13 +1,15 @@
+
+const divResultado = document.querySelector("#resultados");
+const divPrueba = document.querySelector("#prueba");
+const divimagen = document.querySelector("#contenedor-imagen");
 const selectCantProductos1 = document.querySelector("#muestra-cant");
 const selectCantPermitida2 = document.querySelector("#cant-permitida");
 const selectColores3 = document.querySelector("#color-selec");
 const pResultado1 = document.querySelector("#resultado-1");
 const pResultado2 = document.querySelector("#resultado-2");
 const pResultado3 = document.querySelector("#resultado-3");
-const imagenes = document.querySelector("#img-productos");
-const divResultado = document.querySelector("#resultados");
-const divPrueba = document.querySelector("#prueba");
-const divimagen = document.querySelector("#contenedor-imagen");
+
+
 
 
 
@@ -24,34 +26,72 @@ function generar() {
         case "1":
             pResultado1.innerHTML = ("Seleccionaste " + cantidadSeleccionada + " producto");
 
-            divimagen.innerHTML="";
+            divimagen.innerHTML = "";
 
             const imgs1 = [
                 "https://cdn-icons-png.flaticon.com/512/2674/2674505.png"]
 
-            for (let i = 0; i <= imgs1.length; i++) {
-                divimagen.innerHTML += `<img id="img-${i + 1}" src ="${imgs1[i]}" alt = "" > `
+            for (let i = 0; i < imgs1.length; i++) {
+                divimagen.innerHTML += `
+                <fieldset>
+                <h1>Producto ${i+1}</h1>
+                <img id="img-${i + 1}" src ="${imgs1[i]}" alt = "" > 
+                <p>Seleccione pago:</p>
+                <select name="" id="">
+                            <option value="">Efectivo</option>
+                            <option value="">Debito</option>
+                            <option value="">Crédito</option>
+                </select>
+                <p>Seleccione cantidad:</p>
+                <select name="" id="">
+                            <option value="">1</option>
+                            <option value="">15</option>
+                            <option value="">25</option>
+                            <option value="">50</option>
+                </select>
+                <button >Comprar</button>
+                </fieldset>`
+                
             }
+
 
             break;
 
         case "3":
             pResultado1.innerHTML = ("Seleccionaste " + cantidadSeleccionada + " productos");
-            divimagen.innerHTML="";
+            divimagen.innerHTML = "";
 
             const imgs2 = [
                 "https://cdn-icons-png.flaticon.com/512/2674/2674505.png",
                 "https://i.pinimg.com/originals/fd/0b/43/fd0b43c215fc4d57f081386a9f77b5a9.png",
                 "https://st4.depositphotos.com/11953928/24778/v/450/depositphotos_247786442-stock-illustration-supermarket-products-cartoon.jpg"]
 
-            for (let i = 0; i <= imgs2.length; i++) {
-                divimagen.innerHTML += `<img id="img-${i + 1}" src ="${imgs2[i]}" alt = "" > `
+            for (let i = 0; i < imgs2.length; i++) {
+                divimagen.innerHTML += `
+                <fieldset>
+                <h1>Producto ${i + 1}</h1>
+                <img id="img-${i + 1}" src ="${imgs2[i]}" alt = "" >
+                <p>Seleccione pago:</p>
+                <select name="" id="">
+                            <option value="">Efectivo</option>
+                            <option value="">Debito</option>
+                            <option value="">Crédito</option>
+                </select>
+                <p>Seleccione Cantidades:</p>
+                <select name="" id="">
+                        <option value="1">1</option>
+                        <option value="15">15</option>
+                        <option value="15">25</option>
+                        <option value="15">50</option>
+                </select>
+                <button >Comprar</button>
+                </fieldset>`;
             }
             break
 
         case "7":
             pResultado1.innerHTML = ("Seleccionaste " + cantidadSeleccionada + " productos");
-            divimagen.innerHTML="";
+            divimagen.innerHTML = "";
 
             const imgs3 = [
                 "https://cdn-icons-png.flaticon.com/512/2674/2674505.png",
@@ -62,14 +102,33 @@ function generar() {
                 "https://th.bing.com/th/id/R.69845c33b1ea25e0529aa07b6de4aa84?rik=b5leUHVyWvn8fw&pid=ImgRaw&r=0",
                 "https://thumbs.dreamstime.com/b/sistema-del-icono-del-vector-de-los-productos-l%C3%A1cteos-58372668.jpg",]
 
-            for (let i = 0; i <= imgs3.length; i++) {
-                divimagen.innerHTML += `<img id="img-${i + 1}" src ="${imgs3[i]}" alt = "" > `
+            for (let i = 0; i < imgs3.length; i++) {
+                divimagen.innerHTML += `
+                
+                <fieldset>
+                <h1>Producto ${i + 1}</h1>
+                <img id="img-${i + 1}" src ="${imgs3[i]}" alt = "" >
+                <p>Seleccione pago:</p>
+                <select name="" id="">
+                            <option value="">Efectivo</option>
+                            <option value="">Debito</option>
+                            <option value="">Crédito</option>
+                </select>
+                <p>Seleccione Cantidades:</p>
+                <select name="" id="">
+                        <option value="1">1</option>
+                        <option value="15">15</option>
+                        <option value="15">25</option>
+                        <option value="15">50</option>
+                </select>
+                <button >Comprar</button>
+                </fieldset>`;
             }
             break
 
         case "10":
             pResultado1.innerHTML = ("Seleccionaste " + cantidadSeleccionada + " productos");
-            divimagen.innerHTML="";
+            divimagen.innerHTML = "";
 
             const imgs4 = [
                 "https://cdn-icons-png.flaticon.com/512/2674/2674505.png",
@@ -83,8 +142,26 @@ function generar() {
                 "https://th.bing.com/th/id/OIP.5fNY8Xh3Ub4x8Bmpr5nkzwHaD4?pid=ImgDet&rs=1",
                 "https://thumbs.dreamstime.com/z/iconos-de-los-productos-de-limpieza-del-vector-esponja-y-el-lavarse-56614059.jpg"]
 
-            for (let i = 0; i <= imgs4.length; i++) {
-                divimagen.innerHTML += `<img id="img-${i + 1}" src ="${imgs4[i]}" alt = "" > `
+            for (let i = 0; i < imgs4.length; i++) {
+                divimagen.innerHTML += `
+                <fieldset>
+                <h1>Producto ${i + 1}</h1>
+                <img id="img-${i + 1}" src ="${imgs4[i]}" alt = "" >
+                <p>Seleccione pago:</p>
+                <select name="" id="">
+                            <option value="">Efectivo</option>
+                            <option value="">Debito</option>
+                            <option value="">Crédito</option>
+                </select>
+                <p>Seleccione Cantidades:</p>
+                <select name="" id="">
+                        <option value="1">1</option>
+                        <option value="15">15</option>
+                        <option value="15">25</option>
+                        <option value="15">50</option>
+                </select>
+                <button >Comprar</button>
+                </fieldset>`; 
             }
 
     }
