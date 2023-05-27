@@ -17,6 +17,11 @@ h1 {
 img {
     width: 20vh;
     font-size: large;
-    
+   
+}
+
+#contenedor-imagen{
+    border: 4px black;
+
 }
 

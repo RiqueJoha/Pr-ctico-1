@@ -1,6 +1,6 @@
 
 const divResultado = document.querySelector("#resultados");
-const divPrueba = document.querySelector("#prueba");
+const divProductos = document.querySelector("#muestra-products");
 const divimagen = document.querySelector("#contenedor-imagen");
 const selectCantProductos1 = document.querySelector("#muestra-cant");
 const selectCantPermitida2 = document.querySelector("#cant-permitida");
@@ -29,9 +29,10 @@ function generar() {
             divimagen.innerHTML = "";
 
             const imgs1 = [
-                "https://cdn-icons-png.flaticon.com/512/2674/2674505.png"]
+                "https://cdn-icons-png.flaticon.com/512/2674/2674505.png"];
 
             for (let i = 0; i < imgs1.length; i++) {
+             
                 divimagen.innerHTML += `
                 <fieldset>
                 <h1>Producto ${i+1}</h1>
@@ -44,17 +45,11 @@ function generar() {
                 </select>
                 <p>Seleccione cantidad:</p>
                 <select name="" id="">
-                            <option value="">1</option>
-                            <option value="">15</option>
-                            <option value="">25</option>
-                            <option value="">50</option>
+                        <option value="1">${cantidadPermitida}</option>  
                 </select>
                 <button >Comprar</button>
-                </fieldset>`
-                
-            }
-
-
+                </fieldset>`;
+                }
             break;
 
         case "3":
@@ -79,10 +74,7 @@ function generar() {
                 </select>
                 <p>Seleccione Cantidades:</p>
                 <select name="" id="">
-                        <option value="1">1</option>
-                        <option value="15">15</option>
-                        <option value="15">25</option>
-                        <option value="15">50</option>
+                            <option value="1">${cantidadPermitida}</option> 
                 </select>
                 <button >Comprar</button>
                 </fieldset>`;
@@ -116,10 +108,7 @@ function generar() {
                 </select>
                 <p>Seleccione Cantidades:</p>
                 <select name="" id="">
-                        <option value="1">1</option>
-                        <option value="15">15</option>
-                        <option value="15">25</option>
-                        <option value="15">50</option>
+                            <option value="1">${cantidadPermitida}</option> 
                 </select>
                 <button >Comprar</button>
                 </fieldset>`;
@@ -155,10 +144,7 @@ function generar() {
                 </select>
                 <p>Seleccione Cantidades:</p>
                 <select name="" id="">
-                        <option value="1">1</option>
-                        <option value="15">15</option>
-                        <option value="15">25</option>
-                        <option value="15">50</option>
+                            <option value="1">${cantidadPermitida}</option> 
                 </select>
                 <button >Comprar</button>
                 </fieldset>`; 
@@ -185,13 +171,23 @@ function generar() {
 
     switch (colorSeleccionado) {
 
+        case "0":
+            pResultado3.innerHTML = ("No hay colores seleccionados");
+             break
+
         case "1":
             pResultado3.innerHTML = ("Los colores elegidos son: Rojo-Amarillo");
+            divimagen.style.background= "rgb(224, 144, 144)";
             break
+
         case "2":
             pResultado3.innerHTML = ("Los colores elegidos son: Verde-Violeta");
+            divimagen.style.background= "rgb(57, 194, 114)";
             break
+
         case "3":
             pResultado3.innerHTML = ("Los colores elegidos son: Azul-Gris");
+            divimagen.style.background= "rgb(139, 139, 218)";
+
     }
 }
