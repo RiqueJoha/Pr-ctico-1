@@ -1,8 +1,13 @@
 body {
+
+    background-color:pink;
     display: grid;
     place-content: center;
-    background-color: rgb(226, 185, 192);
+    
 }
+
+
+
 
 button {
     border: 2px solid rgb(2, 2, 34);
@@ -22,44 +27,108 @@ img {
 
 #contenedor-imagen{
     border: 4px black;
-
 }
-#prueba-1{
+
+#color1-1{
+    background-color: red;
+}
+#color1-2{
+    background-color: yellow;
+}
+#color1-3{
+    background-color: red;
+}
+#color1-4{
+    background-color: yellow;
+}
+#color1-5{
+    background-color: red;
+}
+#color1-6{
+    background-color: yellow;
+}
+#color1-7{
+    background-color: red;
+}
+#color1-8{
+    background-color: yellow;
+}
+#color1-9{
+    background-color: red;
+}
+#color1-10{
+    background-color: yellow;
+}
+
+
+
+#color2-1{
+    background-color: green;
+}
+#color2-2{
+    background-color: purple;
+}
+#color2-3{
+    background-color: green;
+}
+#color2-4{
+    background-color: purple;
+}
+#color2-5{
+    background-color: green;
+}
+#color2-6{
+    background-color: purple;
+}
+#color2-7{
+    background-color: green;
+}
+#color2-8{
+    background-color: purple;
+}
+#color2-9{
+    background-color: green;
+}
+#color2-10{
+    background-color: purple;
+}
+
+
+
+
+
+#color3-1{
     background-color: blue;
 }
 
-#prueba-2{
+#color3-2{
     background-color: grey;
 }
 
-#prueba-3{
+#color3-3{
     background-color:blue ;
 }
-#prueba-4{
+#color3-4{
     background-color: grey;
 }
-#prueba-5{
+#color3-5{
     background-color: blue;
 }
-#prueba-6{
+#color3-6{
     background-color: grey;
 }
 
-#prueba-7{
+#color3-7{
     background-color: blue;
 }
 
-#prueba-8{
+#color3-8{
     background-color:grey ;
 }
-#prueba-9{
+#color3-9{
     background-color:blue;
 }
-#prueba-10{
+#color3-10{
     background-color: grey;
-}
-
-#estetica-1{
-    background-color: red;
 }
 
