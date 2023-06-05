@@ -5,23 +5,40 @@ body {
     place-content: center;
     
 }
-
-
-
+#contenedor-imagen{
+    display: flex;
+    margin: auto;
+    float: left;
+    overflow: hidden;
+}
 
 button {
     border: 2px solid rgb(2, 2, 34);
     background-color: rgb(212, 212, 224);
-
 }
 
-h1 {
+#contenedor-general {
+    display: grid;
+    place-content:center;
     font-style: monospace;
 }
 
-img {
-    width: 20vh;
+
+
+#imagen-inicial{
+    width: 30vh;
     font-size: large;
+    margin: auto;
+    float: left;
+    overflow: hidden;
+
+}
+img {
+    width: 25vh;
+    display: flex;
+    margin: auto;
+    float: left;
+    overflow: hidden;
    
 }
 

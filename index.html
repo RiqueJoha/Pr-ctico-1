@@ -10,50 +10,57 @@
 </head>
 
 <body>
-    <img id="" src="https://image.freepik.com/vetores-gratis/logotipo-da-pata-de-pet-shop_142351-10.jpg" alt="imagen">
-    <h1>"Pet Shop: Los Devs"</h1>
-    
+
+    <img id="imagen-inicial" src="https://image.freepik.com/vetores-gratis/logotipo-da-pata-de-pet-shop_142351-10.jpg"
+        alt="imagen">
 
 
-    <Div>Cantidad de productos a mostrar:
-        <select name="" id="muestra-cant">
-            <option  value="1">1</option>
-            <option  value="3">3</option>
-            <option  value="7">7</option>
-            <option  value="10">10</option>
-        </select>
-    </Div>
-   
+    <div id="contenedor-general">
+        <h1>"Pet Shop: Los Devs"</h1>
 
-    <Div>Cantidad permitida de cada producto:
-        <select name="" id="cant-permitida">
-            <option value="1">1</option>
-            <option value="15">15</option>
-            <option value="25">25</option>
-            <option value="50">50</option>
-        </select>
-        
-    </Div>
+        <Div>Cantidad de productos a mostrar:
+            <select name="" id="muestra-cant">
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="7">7</option>
+                <option value="10">10</option>
+            </select>
+        </Div>
 
-    <Div>Colores:
-        <select name="" id="color-selec">
-            <option value="0">Ninguno</option>
-            <option value="1">Rojo-Amarillo</option>
-            <option value="2">Verde-Violeta</option>
-            <option value="3">Azul-Gris</option>
-        </select>
-    </Div>
-    
-    <button onclick="generar()">Generar</button>
-     
 
-    <Div id="resultados">
-    <p id="resultado-1"></p>
-    <p id="resultado-2"></p>
-    <p id="resultado-3"></p>
-    </Div>
-    <div id="contenedor-imagen"></div>
-   
+        <Div>Cantidad permitida de cada producto:
+            <select name="" id="cant-permitida">
+                <option value="1">1</option>
+                <option value="15">15</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+            </select>
+
+        </Div>
+
+        <Div>Colores:
+            <select name="" id="color-selec">
+                <option value="0">Ninguno</option>
+                <option value="1">Rojo-Amarillo</option>
+                <option value="2">Verde-Violeta</option>
+                <option value="3">Azul-Gris</option>
+            </select>
+        </Div>
+
+        <button onclick="generar()">Generar</button>
+
+        <Div id="resultados">
+            <p id="resultado-1"></p>
+            <p id="resultado-2"></p>
+            <p id="resultado-3"></p>
+        </Div>
+
+    </div>
+
+    <div id="contenedor-imagen">
+
+    </div>
+
 
     <script src="practico1.js"></script>
 </body>
