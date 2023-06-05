@@ -45,12 +45,13 @@ function generar() {
     let cantidadPermitida = selectCantPermitida2.value
     let colorSeleccionado = selectColores3.value
 
-
     actualizaCantSeleccionada(cantidadSeleccionada, cantidadPermitida);
+
 
     informaCantPermitida(cantidadPermitida, colorSeleccionado);
 
     actualizaColorSeleccionado(colorSeleccionado, cantidadPermitida);
+
 }
 
 
@@ -59,13 +60,8 @@ function actualizaColorSeleccionado(colorSeleccionado, cantidadPermitida) {
 
 
     InformaTodasOpcionesColor(colorSeleccionado, cantidadPermitida);
+
 }
-
-
-
-
-
-
 
 
 
@@ -73,12 +69,12 @@ function actualizaColorSeleccionado(colorSeleccionado, cantidadPermitida) {
 
 /**
  * 
- * @param {number} cantidadSeleccionada -permite elegir las cantidades de los productos
+ * @param {number} cantidadSeleccionada-permite elegir cantidades 
  * @param {number} cantidadPermitida -coloca un límite sobre las cantidades elegidas
- * @param {string}actualizaColorSeleccionado-permite seleccionar colores para los productos
- * @param {number}InformaTodasOpcionesColor-permite relacionar la cantidad elegida con el color seleccionado
+ * @param {string}actualizaColorSeleccionado-selecciona colores para los productos
+ * @param {number}InformaTodasOpcionesColor-relaciona la cantidad elegida con el color seleccionado
  */
- 
+
 
 function InformaTodasOpcionesColor(colorSeleccionado, cantidadPermitida) {
     switch (colorSeleccionado) {
@@ -91,14 +87,14 @@ function InformaTodasOpcionesColor(colorSeleccionado, cantidadPermitida) {
         case "1":
             pResultado3.innerHTML = ("Los colores elegidos son: Rojo-Amarillo");
 
-            EligeOpcion1Color(cantidadPermitida);
+            EligeColor1(cantidadPermitida);
 
             break;
 
         case "2":
             pResultado3.innerHTML = ("Los colores elegidos son: Verde-Violeta");
 
-            EligeOpcion2Color(cantidadPermitida);
+            EligeColor2(cantidadPermitida);
 
             break;
 
@@ -107,7 +103,7 @@ function InformaTodasOpcionesColor(colorSeleccionado, cantidadPermitida) {
 
 
 
-            EligeOpcion3Color(cantidadPermitida);
+            EligeColor3(cantidadPermitida);
 
 
     }
@@ -115,11 +111,19 @@ function InformaTodasOpcionesColor(colorSeleccionado, cantidadPermitida) {
 
 
 
-function EligeOpcion3Color(cantidadPermitida) {
+function EligeColor3(cantidadPermitida) {
+
+
+
+
     switch (selectCantProductos1.value) {
         case "1":
             divImagen.innerHTML = "";
+
+
             for (let i = 0; i < imgs1.length; i++) {
+
+
                 divImagen.innerHTML += `
                         <fieldset id="color3-${i + 1}">
                         <h1>Producto ${i + 1}</h1>
@@ -131,16 +135,19 @@ function EligeOpcion3Color(cantidadPermitida) {
                                     <option value="">Crédito</option>
                         </select>
                         <p>Seleccione cantidad:</p>
+                       
                         <select name="" id="">
-                                <option value="">${cantidadPermitida}</option>  
+                        <option value="">${cantidadPermitida}</option>
                         </select>
                         <button >Comprar</button>
-                        </fieldset>`;
-            }
+                        </fieldset>`}
+
             break;
         case "3":
             divImagen.innerHTML = "";
+
             for (let i = 0; i < imgs2.length; i++) {
+
                 divImagen.innerHTML += `
                         <fieldset id="color3-${i + 1}">
                         <h1>Producto ${i + 1}</h1>
@@ -158,6 +165,8 @@ function EligeOpcion3Color(cantidadPermitida) {
                         <button >Comprar</button>
                         </fieldset>`;
             }
+
+
             break;
         case "7":
             divImagen.innerHTML = "";
@@ -204,7 +213,8 @@ function EligeOpcion3Color(cantidadPermitida) {
     }
 }
 
-function EligeOpcion2Color(cantidadPermitida) {
+function EligeColor2(cantidadPermitida) {
+    
     switch (selectCantProductos1.value) {
         case "1":
             divImagen.innerHTML = "";
@@ -293,7 +303,7 @@ function EligeOpcion2Color(cantidadPermitida) {
     }
 }
 
-function EligeOpcion1Color(cantidadPermitida) {
+function EligeColor1(cantidadPermitida) {
     switch (selectCantProductos1.value) {
         case "1":
             divImagen.innerHTML = "";
@@ -383,6 +393,8 @@ function EligeOpcion1Color(cantidadPermitida) {
 }
 
 function informaCantPermitida(cantidadPermitida) {
+
+
     switch (cantidadPermitida) {
         case "1":
             pResultado2.innerHTML = ("La cantidad permitida es:" + cantidadPermitida);
@@ -404,15 +416,24 @@ function informaCantPermitida(cantidadPermitida) {
 
 
 function actualizaCantSeleccionada(cantidadSeleccionada, cantidadPermitida) {
-    actualizaColorSeleccionado()
+
+
 
     switch (cantidadSeleccionada) {
+
+
 
         case "1":
             pResultado1.innerHTML = ("Seleccionaste " + cantidadSeleccionada + " producto");
 
             divImagen.innerHTML = "";
 
+            cantidadPermitida="1";
+
+            for (let w = 2; w <= selectCantPermitida2.value; w++) {
+
+                cantidadPermitida += `<option value="">${w}</option>`
+            }
 
             for (let i = 0; i < imgs1.length; i++) {
 
@@ -438,6 +459,11 @@ function actualizaCantSeleccionada(cantidadSeleccionada, cantidadPermitida) {
         case "3":
             pResultado1.innerHTML = ("Seleccionaste " + cantidadSeleccionada + " productos");
             divImagen.innerHTML = "";
+            cantidadPermitida = "1";
+            for (let w = 2; w <= selectCantPermitida2.value; w++) {
+
+                cantidadPermitida += `<option value="">${w}</option>`
+            }
 
             for (let i = 0; i < imgs2.length; i++) {
 
@@ -464,6 +490,11 @@ function actualizaCantSeleccionada(cantidadSeleccionada, cantidadPermitida) {
         case "7":
             pResultado1.innerHTML = ("Seleccionaste " + cantidadSeleccionada + " productos");
             divImagen.innerHTML = "";
+            cantidadPermitida = "1";
+            for (let w = 2; w <= selectCantPermitida2.value; w++) {
+
+                cantidadPermitida += `<option value="">${w}</option>`
+            }
 
             for (let i = 0; i < imgs3.length; i++) {
                 divImagen.innerHTML += `
@@ -489,6 +520,10 @@ function actualizaCantSeleccionada(cantidadSeleccionada, cantidadPermitida) {
         case "10":
             pResultado1.innerHTML = ("Seleccionaste " + cantidadSeleccionada + " productos");
             divImagen.innerHTML = "";
+            cantidadPermitida = "1";
+            for (let w = 2; w <= selectCantPermitida2.value; w++) {
+
+                cantidadPermitida += `<option value="">${w}</option>`}
 
             for (let i = 0; i < imgs4.length; i++) {
                 divImagen.innerHTML += `
@@ -508,7 +543,6 @@ function actualizaCantSeleccionada(cantidadSeleccionada, cantidadPermitida) {
                 <button >Comprar</button>
                 </fieldset>`;
             }
-
     }
 }
 

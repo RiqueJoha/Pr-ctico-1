@@ -1,6 +1,6 @@
 body {
 
-    background-color:pink;
+    background-color:rgb(202, 117, 130);
     display: grid;
     place-content: center;
     
@@ -26,7 +26,7 @@ button {
 
 
 #imagen-inicial{
-    width: 30vh;
+    width: 32vh;
     font-size: large;
     margin: auto;
     float: left;
@@ -34,11 +34,9 @@ button {
 
 }
 img {
-    width: 25vh;
+    width: 27vh;
     display: flex;
-    margin: auto;
-    float: left;
-    overflow: hidden;
+    flex-wrap: wrap;
    
 }
 
@@ -47,67 +45,67 @@ img {
 }
 
 #color1-1{
-    background-color: red;
+    background-color: rgb(219, 10, 10);
 }
 #color1-2{
-    background-color: yellow;
+    background-color: rgb(236, 236, 11);
 }
 #color1-3{
-    background-color: red;
+    background-color: rgb(219, 10, 10)
 }
 #color1-4{
-    background-color: yellow;
+    background-color:  rgb(236, 236, 11);
 }
 #color1-5{
-    background-color: red;
+    background-color: rgb(219, 10, 10);
 }
 #color1-6{
-    background-color: yellow;
+    background-color:  rgb(236, 236, 11);
 }
 #color1-7{
-    background-color: red;
+    background-color: rgb(219, 10, 10);
 }
 #color1-8{
-    background-color: yellow;
+    background-color:  rgb(236, 236, 11);
 }
 #color1-9{
-    background-color: red;
+    background-color: rgb(219, 10, 10);
 }
 #color1-10{
-    background-color: yellow;
+    background-color: rgb(236, 236, 11);
 }
 
 
 
 #color2-1{
-    background-color: green;
+    background-color: rgb(11, 122, 11);
 }
 #color2-2{
-    background-color: purple;
+    background-color: rgb(92, 3, 92);
 }
 #color2-3{
-    background-color: green;
+    background-color: rgb(11, 122, 11);
 }
 #color2-4{
-    background-color: purple;
+    background-color: rgb(92, 3, 92);
 }
 #color2-5{
-    background-color: green;
+    background-color: rgb(11, 122, 11);
 }
 #color2-6{
-    background-color: purple;
+    background-color:rgb(92, 3, 92);
 }
 #color2-7{
-    background-color: green;
+    background-color: rgb(11, 122, 11);
 }
 #color2-8{
-    background-color: purple;
+    background-color: rgb(92, 3, 92);
 }
 #color2-9{
-    background-color: green;
+    background-color: rgb(11, 122, 11);
 }
 #color2-10{
-    background-color: purple;
+    background-color: rgb(92, 3, 92);
 }
 
 
@@ -115,37 +113,37 @@ img {
 
 
 #color3-1{
-    background-color: blue;
+    background-color: rgb(13, 13, 180);
 }
 
 #color3-2{
-    background-color: grey;
+    background-color: rgb(134, 132, 132);
 }
 
 #color3-3{
-    background-color:blue ;
+    background-color:rgb(13, 13, 180) ;
 }
 #color3-4{
-    background-color: grey;
+    background-color: rgb(134, 132, 132);
 }
 #color3-5{
-    background-color: blue;
+    background-color: rgb(13, 13, 180);
 }
 #color3-6{
-    background-color: grey;
+    background-color: rgb(134, 132, 132);
 }
 
 #color3-7{
-    background-color: blue;
+    background-color: rgb(13, 13, 180);
 }
 
 #color3-8{
-    background-color:grey ;
+    background-color:rgb(134, 132, 132);
 }
 #color3-9{
-    background-color:blue;
+    background-color:rgb(13, 13, 180);
 }
 #color3-10{
-    background-color: grey;
+    background-color:rgb(134, 132, 132);
 }
 
