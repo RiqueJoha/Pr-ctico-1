@@ -7,7 +7,6 @@ const pResultado2 = document.querySelector("#resultado-2");
 const pResultado3 = document.querySelector("#resultado-3");
 
 
-
 const imgs1 = [
     "https://th.bing.com/th/id/R.ce34903fd1c3b375ff7504b093ba6ed2?rik=ceFhJXsXFhc7Hw&pid=ImgRaw&r=0"]
 const imgs2 = [
@@ -41,16 +40,17 @@ const imgs4 = [
 
 function generar() {
 
-    let cantidadSeleccionada = selectCantProductos1.value
-    let cantidadPermitida = selectCantPermitida2.value
-    let colorSeleccionado = selectColores3.value
+    let cantidadSeleccionada = selectCantProductos1.value;
+    let cantidadPermitida = selectCantPermitida2.value;
+    let colorSeleccionado = selectColores3.value;
+   
 
-    actualizaCantSeleccionada(cantidadSeleccionada, cantidadPermitida);
-
+   actualizaCantSeleccionada(cantidadSeleccionada, cantidadPermitida);
 
     informaCantPermitida(cantidadPermitida, colorSeleccionado);
 
     actualizaColorSeleccionado(colorSeleccionado, cantidadPermitida);
+
 
 }
 
@@ -65,23 +65,24 @@ function actualizaColorSeleccionado(colorSeleccionado, cantidadPermitida) {
 
 
 
-
-
-/**
- * 
- * @param {number} cantidadSeleccionada-permite elegir cantidades 
- * @param {number} cantidadPermitida -coloca un límite sobre las cantidades elegidas
- * @param {string}actualizaColorSeleccionado-selecciona colores para los productos
- * @param {number}InformaTodasOpcionesColor-relaciona la cantidad elegida con el color seleccionado
- */
-
-
 function InformaTodasOpcionesColor(colorSeleccionado, cantidadPermitida) {
+
+    divImagen.innerHTML = "";
+    cantidadPermitida = "1";
+    for (let w = 2; w <= selectCantPermitida2.value; w++) {
+
+        cantidadPermitida += `<option value="">${w}</option>`
+    }
+
     switch (colorSeleccionado) {
 
 
         case "0":
             pResultado3.innerHTML = ("No hay colores seleccionados");
+
+            EligeColor0(cantidadPermitida);
+
+
             break;
 
         case "1":
@@ -110,6 +111,111 @@ function InformaTodasOpcionesColor(colorSeleccionado, cantidadPermitida) {
 }
 
 
+/**
+ * 
+ * @param {number} cantidadSeleccionada-permite elegir cantidades 
+ * @param {number} cantidadPermitida -coloca un límite sobre las cantidades elegidas
+ * @param {string}actualizaColorSeleccionado-selecciona colores para los productos
+ * @param {number}InformaTodasOpcionesColor-relaciona la cantidad elegida con el color seleccionado
+ */
+
+
+
+function EligeColor0(cantidadPermitida) {
+    switch (selectCantProductos1.value) {
+        case "1":
+
+            for (let i = 0; i < imgs1.length; i++) {
+
+
+                divImagen.innerHTML += `
+                                <fieldset id="color0-${i + 1}">
+                                <h1>Producto ${i + 1}</h1>
+                                <img id="img-${i + 1}" src ="${imgs1[i]}" alt = "" > 
+                                <p>Seleccione pago:</p>
+                                <select name="" id="">
+                                            <option value="">Efectivo</option>
+                                            <option value="">Débito</option>
+                                            <option value="">Crédito</option>
+                                </select>
+                                <p>Seleccione cantidad:</p>
+                               
+                                <select name="" id="">
+                                <option value="">${cantidadPermitida}</option>
+                                </select>
+                                <button >Comprar</button>
+                                </fieldset>`;
+            }
+
+            break;
+        case "3":
+
+            for (let i = 0; i < imgs2.length; i++) {
+
+                divImagen.innerHTML += `
+                                <fieldset id="color0-${i + 1}">
+                                <h1>Producto ${i + 1}</h1>
+                                <img id="img-${i + 1}" src ="${imgs2[i]}" alt = "" > 
+                                <p>Seleccione pago:</p>
+                                <select name="" id="">
+                                            <option value="">Efectivo</option>
+                                            <option value="">Débito</option>
+                                            <option value="">Crédito</option>
+                                </select>
+                                <p>Seleccione cantidad:</p>
+                                <select name="" id="">
+                                        <option value="">${cantidadPermitida}</option>  
+                                </select>
+                                <button >Comprar</button>
+                                </fieldset>`;
+            }
+
+
+            break;
+        case "7":
+
+            for (let i = 0; i < imgs3.length; i++) {
+                divImagen.innerHTML += `
+                                <fieldset id="color0-${i + 1}">
+                                <h1>Producto ${i + 1}</h1>
+                                <img id="img-${i + 1}" src ="${imgs3[i]}" alt = "" > 
+                                <p>Seleccione pago:</p>
+                                <select name="" id="">
+                                            <option value="">Efectivo</option>
+                                            <option value="">Débito</option>
+                                            <option value="">Crédito</option>
+                                </select>
+                                <p>Seleccione cantidad:</p>
+                                <select name="" id="">
+                                        <option value="">${cantidadPermitida}</option>  
+                                </select>
+                                <button >Comprar</button>
+                                </fieldset>`;
+            }
+            break;
+        case "10":
+
+            for (let i = 0; i < imgs4.length; i++) {
+                divImagen.innerHTML += `
+                                <fieldset id="color0-${i + 1}">
+                                <h1>Producto ${i + 1}</h1>
+                                <img id="img-${i + 1}" src ="${imgs4[i]}" alt = "" > 
+                                <p>Seleccione pago:</p>
+                                <select name="" id="">
+                                            <option value="">Efectivo</option>
+                                            <option value="">Débito</option>
+                                            <option value="">Crédito</option>
+                                </select>
+                                <p>Seleccione cantidad:</p>
+                                <select name="" id="">
+                                        <option value="">${cantidadPermitida}</option>  
+                                </select>
+                                <button >Comprar</button>
+                                </fieldset>`;
+            }
+
+    }
+}
 
 function EligeColor3(cantidadPermitida) {
 
@@ -118,8 +224,6 @@ function EligeColor3(cantidadPermitida) {
 
     switch (selectCantProductos1.value) {
         case "1":
-            divImagen.innerHTML = "";
-
 
             for (let i = 0; i < imgs1.length; i++) {
 
@@ -131,7 +235,7 @@ function EligeColor3(cantidadPermitida) {
                         <p>Seleccione pago:</p>
                         <select name="" id="">
                                     <option value="">Efectivo</option>
-                                    <option value="">Debito</option>
+                                    <option value="">Débito</option>
                                     <option value="">Crédito</option>
                         </select>
                         <p>Seleccione cantidad:</p>
@@ -144,7 +248,6 @@ function EligeColor3(cantidadPermitida) {
 
             break;
         case "3":
-            divImagen.innerHTML = "";
 
             for (let i = 0; i < imgs2.length; i++) {
 
@@ -155,7 +258,7 @@ function EligeColor3(cantidadPermitida) {
                         <p>Seleccione pago:</p>
                         <select name="" id="">
                                     <option value="">Efectivo</option>
-                                    <option value="">Debito</option>
+                                    <option value="">Débito</option>
                                     <option value="">Crédito</option>
                         </select>
                         <p>Seleccione cantidad:</p>
@@ -169,7 +272,7 @@ function EligeColor3(cantidadPermitida) {
 
             break;
         case "7":
-            divImagen.innerHTML = "";
+
             for (let i = 0; i < imgs3.length; i++) {
                 divImagen.innerHTML += `
                         <fieldset id="color3-${i + 1}">
@@ -178,7 +281,7 @@ function EligeColor3(cantidadPermitida) {
                         <p>Seleccione pago:</p>
                         <select name="" id="">
                                     <option value="">Efectivo</option>
-                                    <option value="">Debito</option>
+                                    <option value="">Débito</option>
                                     <option value="">Crédito</option>
                         </select>
                         <p>Seleccione cantidad:</p>
@@ -190,7 +293,7 @@ function EligeColor3(cantidadPermitida) {
             }
             break;
         case "10":
-            divImagen.innerHTML = "";
+
             for (let i = 0; i < imgs4.length; i++) {
                 divImagen.innerHTML += `
                         <fieldset id="color3-${i + 1}">
@@ -199,7 +302,7 @@ function EligeColor3(cantidadPermitida) {
                         <p>Seleccione pago:</p>
                         <select name="" id="">
                                     <option value="">Efectivo</option>
-                                    <option value="">Debito</option>
+                                    <option value="">Débito</option>
                                     <option value="">Crédito</option>
                         </select>
                         <p>Seleccione cantidad:</p>
@@ -214,10 +317,10 @@ function EligeColor3(cantidadPermitida) {
 }
 
 function EligeColor2(cantidadPermitida) {
-    
+
     switch (selectCantProductos1.value) {
         case "1":
-            divImagen.innerHTML = "";
+            
             for (let i = 0; i < imgs1.length; i++) {
                 divImagen.innerHTML += `
                         <fieldset id="color2-${i + 1}">
@@ -226,7 +329,7 @@ function EligeColor2(cantidadPermitida) {
                         <p>Seleccione pago:</p>
                         <select name="" id="">
                                     <option value="">Efectivo</option>
-                                    <option value="">Debito</option>
+                                    <option value="">Débito</option>
                                     <option value="">Crédito</option>
                         </select>
                         <p>Seleccione cantidad:</p>
@@ -238,7 +341,7 @@ function EligeColor2(cantidadPermitida) {
             }
             break;
         case "3":
-            divImagen.innerHTML = "";
+            
             for (let i = 0; i < imgs2.length; i++) {
                 divImagen.innerHTML += `
                         <fieldset id="color2-${i + 1}">
@@ -247,7 +350,7 @@ function EligeColor2(cantidadPermitida) {
                         <p>Seleccione pago:</p>
                         <select name="" id="">
                                     <option value="">Efectivo</option>
-                                    <option value="">Debito</option>
+                                    <option value="">Débito</option>
                                     <option value="">Crédito</option>
                         </select>
                         <p>Seleccione cantidad:</p>
@@ -259,7 +362,7 @@ function EligeColor2(cantidadPermitida) {
             }
             break;
         case "7":
-            divImagen.innerHTML = "";
+         
             for (let i = 0; i < imgs3.length; i++) {
                 divImagen.innerHTML += `
                         <fieldset id="color2-${i + 1}">
@@ -268,7 +371,7 @@ function EligeColor2(cantidadPermitida) {
                         <p>Seleccione pago:</p>
                         <select name="" id="">
                                     <option value="">Efectivo</option>
-                                    <option value="">Debito</option>
+                                    <option value="">Débito</option>
                                     <option value="">Crédito</option>
                         </select>
                         <p>Seleccione cantidad:</p>
@@ -280,7 +383,7 @@ function EligeColor2(cantidadPermitida) {
             }
             break;
         case "10":
-            divImagen.innerHTML = "";
+            
             for (let i = 0; i < imgs4.length; i++) {
                 divImagen.innerHTML += `
                         <fieldset id="color2-${i + 1}">
@@ -289,7 +392,7 @@ function EligeColor2(cantidadPermitida) {
                         <p>Seleccione pago:</p>
                         <select name="" id="">
                                     <option value="">Efectivo</option>
-                                    <option value="">Debito</option>
+                                    <option value="">Débito</option>
                                     <option value="">Crédito</option>
                         </select>
                         <p>Seleccione cantidad:</p>
@@ -306,7 +409,7 @@ function EligeColor2(cantidadPermitida) {
 function EligeColor1(cantidadPermitida) {
     switch (selectCantProductos1.value) {
         case "1":
-            divImagen.innerHTML = "";
+             
             for (let i = 0; i < imgs1.length; i++) {
                 divImagen.innerHTML += `
                         <fieldset id="color1-${i + 1}">
@@ -315,7 +418,7 @@ function EligeColor1(cantidadPermitida) {
                         <p>Seleccione pago:</p>
                         <select name="" id="">
                                     <option value="">Efectivo</option>
-                                    <option value="">Debito</option>
+                                    <option value="">Débito</option>
                                     <option value="">Crédito</option>
                         </select>
                         <p>Seleccione cantidad:</p>
@@ -327,7 +430,7 @@ function EligeColor1(cantidadPermitida) {
             }
             break;
         case "3":
-            divImagen.innerHTML = "";
+            
             for (let i = 0; i < imgs2.length; i++) {
                 divImagen.innerHTML += `
                         <fieldset id="color1-${i + 1}">
@@ -336,7 +439,7 @@ function EligeColor1(cantidadPermitida) {
                         <p>Seleccione pago:</p>
                         <select name="" id="">
                                     <option value="">Efectivo</option>
-                                    <option value="">Debito</option>
+                                    <option value="">Débito</option>
                                     <option value="">Crédito</option>
                         </select>
                         <p>Seleccione cantidad:</p>
@@ -348,7 +451,7 @@ function EligeColor1(cantidadPermitida) {
             }
             break;
         case "7":
-            divImagen.innerHTML = "";
+            
             for (let i = 0; i < imgs3.length; i++) {
                 divImagen.innerHTML += `
                         <fieldset id="color1-${i + 1}">
@@ -357,7 +460,7 @@ function EligeColor1(cantidadPermitida) {
                         <p>Seleccione pago:</p>
                         <select name="" id="">
                                     <option value="">Efectivo</option>
-                                    <option value="">Debito</option>
+                                    <option value="">Débito</option>
                                     <option value="">Crédito</option>
                         </select>
                         <p>Seleccione cantidad:</p>
@@ -369,7 +472,7 @@ function EligeColor1(cantidadPermitida) {
             }
             break;
         case "10":
-            divImagen.innerHTML = "";
+            
             for (let i = 0; i < imgs4.length; i++) {
                 divImagen.innerHTML += `
                         <fieldset id="color1-${i + 1}">
@@ -378,7 +481,7 @@ function EligeColor1(cantidadPermitida) {
                         <p>Seleccione pago:</p>
                         <select name="" id="">
                                     <option value="">Efectivo</option>
-                                    <option value="">Debito</option>
+                                    <option value="">Débito</option>
                                     <option value="">Crédito</option>
                         </select>
                         <p>Seleccione cantidad:</p>
@@ -425,11 +528,8 @@ function actualizaCantSeleccionada(cantidadSeleccionada, cantidadPermitida) {
 
         case "1":
             pResultado1.innerHTML = ("Seleccionaste " + cantidadSeleccionada + " producto");
-
             divImagen.innerHTML = "";
-
-            cantidadPermitida="1";
-
+            cantidadPermitida = "1";
             for (let w = 2; w <= selectCantPermitida2.value; w++) {
 
                 cantidadPermitida += `<option value="">${w}</option>`
@@ -444,7 +544,7 @@ function actualizaCantSeleccionada(cantidadSeleccionada, cantidadPermitida) {
                 <p>Seleccione pago:</p>
                 <select name="" id="">
                             <option value="">Efectivo</option>
-                            <option value="">Debito</option>
+                            <option value="">Débito</option>
                             <option value="">Crédito</option>
                 </select>
                 <p>Seleccione cantidad:</p>
@@ -465,6 +565,7 @@ function actualizaCantSeleccionada(cantidadSeleccionada, cantidadPermitida) {
                 cantidadPermitida += `<option value="">${w}</option>`
             }
 
+
             for (let i = 0; i < imgs2.length; i++) {
 
                 divImagen.innerHTML += `
@@ -474,7 +575,7 @@ function actualizaCantSeleccionada(cantidadSeleccionada, cantidadPermitida) {
                 <p>Seleccione pago:</p>
                 <select name="" id="">
                             <option value="">Efectivo</option>
-                            <option value="">Debito</option>
+                            <option value="">Débito</option>
                             <option value="">Crédito</option>
                 </select>
                 <p>Seleccione cantidad:</p>
@@ -505,7 +606,7 @@ function actualizaCantSeleccionada(cantidadSeleccionada, cantidadPermitida) {
                 <p>Seleccione pago:</p>
                 <select name="" id="">
                             <option value="">Efectivo</option>
-                            <option value="">Debito</option>
+                            <option value="">Débito</option>
                             <option value="">Crédito</option>
                 </select>
                 <p>Seleccione Cantidades:</p>
@@ -523,7 +624,8 @@ function actualizaCantSeleccionada(cantidadSeleccionada, cantidadPermitida) {
             cantidadPermitida = "1";
             for (let w = 2; w <= selectCantPermitida2.value; w++) {
 
-                cantidadPermitida += `<option value="">${w}</option>`}
+                cantidadPermitida += `<option value="">${w}</option>`
+            }
 
             for (let i = 0; i < imgs4.length; i++) {
                 divImagen.innerHTML += `
@@ -533,7 +635,7 @@ function actualizaCantSeleccionada(cantidadSeleccionada, cantidadPermitida) {
                 <p>Seleccione pago:</p>
                 <select name="" id="">
                             <option value="">Efectivo</option>
-                            <option value="">Debito</option>
+                            <option value="">Débito</option>
                             <option value="">Crédito</option>
                 </select>
                 <p>Seleccione Cantidades:</p>
@@ -545,4 +647,4 @@ function actualizaCantSeleccionada(cantidadSeleccionada, cantidadPermitida) {
             }
     }
 }
-
+ 
